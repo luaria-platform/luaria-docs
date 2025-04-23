@@ -11,8 +11,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LuAria Docs',
-  tagline: 'Build, Bundle & Run Mods on iOS & Android',
-  favicon: 'img/luaria.ico',
+  tagline: 'Build, Bundle & Execute Mods on Terraria Mobile',
+  favicon: '/img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://docs.luaria.app',
@@ -33,8 +33,8 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fr', 'de', 'es', 'it', 'pt', 'ru'],
-    localeConfigs: {
+    locales: ['en', /*'fr', 'de', 'es', 'it', 'pt', 'ru'*/],
+    /* localeConfigs: {
       en: {
         label: 'English',
         direction: 'ltr',
@@ -71,7 +71,7 @@ const config = {
         direction: 'ltr',
         htmlLang: 'ru-RU',
       },
-    },
+    }, */
   },  
 
   presets: [
@@ -84,10 +84,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/luaria-platform/luaria-docs/tree/main/',
-            showLastUpdateTime: true,
-            showLastUpdateAuthor: false,
+          editUrl: 'https://github.com/luaria-platform/luaria-docs/edit/main/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         }, 
         blog: false,
         theme: {
@@ -104,7 +103,7 @@ const config = {
       ({
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        language: ['en', 'fr', 'de', 'es', 'it', 'pt', 'ru'],
+        language: ['en', /*'fr', 'de', 'es', 'it', 'pt', 'ru'*/],
         highlightSearchTermsOnTargetPage: true,
         docsRouteBasePath: '/',
       }),
@@ -114,12 +113,23 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: false,
+        }
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
+        hideOnScroll: true,
         title: 'LuAria Docs',
         logo: {
           alt: 'LuAria Logo',
-          src: 'img/luaria.png',
+          src: '/img/luaria.png',
         },
         items: [
           {
@@ -133,23 +143,18 @@ const config = {
               },
               {
                 //MARK: - TODO:
-                href: '/',
+                href: 'https://github.com/luaria-platform/luaria-docs/',
                 label: 'Help Us Translate',
               },
             ]
           },
           {
-            href: 'https://github.com/luaria-platform/luaria-docs',
+            href: 'https://github.com/luaria-platform/',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
         ],
-      },
-      docs: {
-        sidebar: {
-          hideable: true,
-        }
       },
       // We don't need this. I want to keep the impl straight foward.
       // footer: {...}

@@ -22,9 +22,7 @@ loader.alert(
 ```
 
 ## Why use alerts?
-- **Important messages:** let the player know of critical events such as errors, confirmation, etc.  
-- **Player Prompts** ask the player for confirmations.
-- **Debugging:** show a quick alert of an item that was spawned, or an npc who arived to town.
+Showing alerts can be a quick & easy way to show an issue or some useful information to the player, whether to use alerts or not is up to you.
 ```lua
 loader.alert(
   "Warning",

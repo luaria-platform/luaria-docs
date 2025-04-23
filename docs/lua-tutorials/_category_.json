@@ -1,0 +1,8 @@
+{
+  "label": "Lua 5.4 Tutorials",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "This is a collection of Lua tutorials, ranging from basic Lua knowledge to more complex concepts like tables and oop. It is not intended to start your Lua programming journey; for that, refer to the official Lua docs to get started: https://www.lua.org/pil/1.html"
+  }
+}
