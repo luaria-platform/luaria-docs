@@ -64,7 +64,7 @@ It is highly recommanded that you do not perform heavy computational work within
 
 :::
 
-Lets register the imgui render callback and lets create a window wich will show some text with an infite counter.
+Lets register the imgui render callback and lets create a window wich will show some text with an infinite counter.
 
 
 :::warning Caution
@@ -96,7 +96,7 @@ A floating imgui window updates every frame with your counter, counting.
 
 :::
 
-:::warning Knowledge Notice
+:::warning Notice
 
 It is recommanded that you have some ImGui knowledge before you make use of this API, all-though imgui is pretty easy to use, for a beginer it is quite complex espically since the modder needs to keep track of Begin/End calls. 
 

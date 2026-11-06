@@ -4,9 +4,9 @@ sidebar_label: Types & Values
 ---
 
 # Types and Values
-Lua is a dynamically typed language. There are no type definitions; This means that each value contains its own value.
+Lua is a dynamically typed language. There are no type definitions; This means that each value contains its own type.
 
-Lua doesn’t have variable data types, but weirdly enough its values carries the type with it. Here is a table listing all eight Lua value types.
+Lua doesn’t assign types to variables; but weirdly enough, its values carry their own type. Here is a table listing all eight Lua value types.
 | Value Type | Description                                      |
 |------------|--------------------------------------------------|
 | `nil`      | The absence of a useful value                    |
@@ -23,7 +23,7 @@ Lua has a function named `type` which enables us to know the type of a value. He
 ```type(value: any) -> string``` function.
 ```lua
 print(type("Hi World"))  --> string
-print(type(5.4*2))      --> number
+print(type(5.4*2))       --> number
 print(type(print))       --> function
 print(type(type))        --> function
 print(type(true))        --> boolean
@@ -31,7 +31,6 @@ print(type(nil))         --> nil
 print(type(type(X)))     --> string
 ```
 **Output**  
-When you run the following code above you get these results:
 ```
 string
 number
@@ -52,7 +51,6 @@ print(type(a))   --> string
 a = print        -- yes, this is valid!
 a(type(a))       --> function
 ```
-
 **Output**
 ```
 nil
